@@ -1,5 +1,9 @@
 extends CharacterBody2D
 
+@export var move_speed: float = 260.0
+@export var jump_velocity: float = -420.0
+@export var air_control: float = 0.5
+@export var coyote_time: float = 0.12
 @export var move_speed := 260.0
 @export var jump_velocity := -420.0
 @export var air_control := 0.5
@@ -32,6 +36,9 @@ func _physics_process(delta: float) -> void:
 
 func _ensure_input_actions() -> void:
 	var actions := {
+		"move_left": KEY_A,
+		"move_right": KEY_D,
+		"jump": KEY_SPACE,
 		"move_left": Key.A,
 		"move_right": Key.D,
 		"jump": Key.SPACE,
