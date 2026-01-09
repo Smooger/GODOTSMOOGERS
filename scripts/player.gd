@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
-@export var move_speed := 260.0
-@export var jump_velocity := -420.0
-@export var air_control := 0.5
-@export var coyote_time := 0.12
+@export var move_speed: float = 260.0
+@export var jump_velocity: float = -420.0
+@export var air_control: float = 0.5
+@export var coyote_time: float = 0.12
 
 var _gravity := ProjectSettings.get_setting("physics/2d/default_gravity")
 var _coyote_timer := 0.0
