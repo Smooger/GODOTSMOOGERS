@@ -43,4 +43,5 @@ func _ensure_restart_action() -> void:
 	InputMap.add_action("restart")
 	var event := InputEventKey.new()
 	event.keycode = KEY_R
+	event.keycode = Key.R
 	InputMap.action_add_event("restart", event)

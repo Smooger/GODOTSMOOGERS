@@ -7,6 +7,7 @@ signal level_completed
 
 @export var starting_time := 45.0
 @export var overtime_cap := 30.0
+@export var puddle_scene: PackedScene
 
 var time_left := 0.0
 var coins := 0
@@ -59,6 +60,7 @@ func fail_level() -> void:
 	if not active:
 		return
 	active = false
+	_spawn_puddle()
 	emit_signal("level_failed")
 
 func complete_level() -> void:
@@ -69,3 +71,13 @@ func complete_level() -> void:
 
 func retry_level() -> void:
 	get_tree().reload_current_scene()
+
+func _spawn_puddle() -> void:
+	if puddle_scene == null:
+		return
+	var player := get_tree().get_first_node_in_group("player")
+	if player == null:
+		return
+	var puddle := puddle_scene.instantiate()
+	get_tree().current_scene.add_child(puddle)
+	puddle.global_position = player.global_position
