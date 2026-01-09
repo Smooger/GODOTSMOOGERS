@@ -1,5 +1,4 @@
-[gd_scene load_steps=12 format=3]
-[gd_scene load_steps=13 format=3]
+[gd_scene load_steps=12 format=3 uid="uid://c2y1k8htp8k3s"]
 
 [ext_resource type="PackedScene" path="res://scenes/Player.tscn" id=1]
 [ext_resource type="PackedScene" path="res://scenes/Enemy.tscn" id=2]
@@ -8,7 +7,6 @@
 [ext_resource type="PackedScene" path="res://scenes/HUD.tscn" id=5]
 [ext_resource type="PackedScene" path="res://scenes/Goal.tscn" id=6]
 [ext_resource type="Script" path="res://scripts/game.gd" id=7]
-[ext_resource type="PackedScene" path="res://scenes/Puddle.tscn" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 size = Vector2(1400, 80)
@@ -26,7 +24,6 @@ size = Vector2(180, 32)
 
 [node name="Game" type="Node" parent="."]
 script = ExtResource(7)
-puddle_scene = ExtResource(8)
 
 [node name="Player" parent="." instance=ExtResource(1)]
 position = Vector2(120, 520)
