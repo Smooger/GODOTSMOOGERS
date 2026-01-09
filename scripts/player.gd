@@ -5,8 +5,8 @@ extends CharacterBody2D
 @export var air_control: float = 0.5
 @export var coyote_time: float = 0.12
 
-var _gravity := ProjectSettings.get_setting("physics/2d/default_gravity")
-var _coyote_timer := 0.0
+var _gravity: float = float(ProjectSettings.get_setting("physics/2d/default_gravity"))
+var _coyote_timer: float = 0.0
 
 func _ready() -> void:
 	add_to_group("player")
