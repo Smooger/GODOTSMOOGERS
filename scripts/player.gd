@@ -32,9 +32,9 @@ func _physics_process(delta: float) -> void:
 
 func _ensure_input_actions() -> void:
 	var actions := {
-		"move_left": Key.A,
-		"move_right": Key.D,
-		"jump": Key.SPACE,
+		"move_left": KEY_A,
+		"move_right": KEY_D,
+		"jump": KEY_SPACE,
 	}
 	for action in actions.keys():
 		if not InputMap.has_action(action):
